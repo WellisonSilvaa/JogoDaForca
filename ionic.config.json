@@ -1,0 +1,7 @@
+{
+  "name": "JogoDaForca",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
