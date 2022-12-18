@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+     Jogo da Forca
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,76 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Jogo da Forca</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <div>
+      <div align="center">
+        <input type="password" [(ngModel)]="palavra">
+      </div>
+      <div align="center">
+        <ion-button *ngIf="gameIniciado === false" (click) = "jogar()" color="warning" >Jogar</ion-button>
+        <ion-button *ngIf="gameIniciado === true" (click) = "reiniciar()" color="danger">Reiniciar</ion-button>
+      </div>
+      <div align="center">
+        <input type="text" [(ngModel)]="palavraOculta">
+      </div>
+    </div>
+
+    <div class="card-buttons">
+      <div align="center" class="but">
+          <ion-button #button1 color="warning" fill="outline" (click) = "pesquisarLetra(button1,'a')">A</ion-button>
+          <ion-button #button2 color="warning" fill="outline" (click) = "pesquisarLetra(button2,'b')">B</ion-button>
+          <ion-button #button3 color="warning" fill="outline" (click) = "pesquisarLetra(button3,'c')">C</ion-button>
+          <ion-button #button4 color="warning" fill="outline" (click) = "pesquisarLetra(button4,'d')">D</ion-button>
+      </div>
+      <div align="center" class="but">
+          <ion-button #button5 color="warning" fill="outline" (click) = "pesquisarLetra(button5,'e')">E</ion-button>
+          <ion-button #button6 color="warning" fill="outline" (click) = "pesquisarLetra(button6,'f')">F</ion-button>
+          <ion-button #button7 color="warning" fill="outline" (click) = "pesquisarLetra(button7,'g')">G</ion-button>
+          <ion-button #button8 color="warning" fill="outline" (click) = "pesquisarLetra(button8,'h')">H</ion-button>
+      </div>
+      <div align="center" class="but">
+          <ion-button #button9 color="warning" fill="outline" (click) = "pesquisarLetra(button9,'i')">I</ion-button>
+          <ion-button #button10 color="warning" fill="outline" (click) = "pesquisarLetra(button10,'j')">J</ion-button>
+          <ion-button #button11 color="warning"  fill="outline" (click) = "pesquisarLetra(button11,'l')">L</ion-button>
+          <ion-button #button12 color="warning" fill="outline" (click) = "pesquisarLetra(button12,'m')">M</ion-button>
+      </div>
+      <div align="center" class="but">
+        <ion-button #button13 color="warning" fill="outline" (click) = "pesquisarLetra(button13,'n')">N</ion-button>
+        <ion-button #button14 color="warning" fill="outline" (click) = "pesquisarLetra(button14,'o')">O</ion-button>
+        <ion-button #button15 color="warning" fill="outline" (click) = "pesquisarLetra(button15,'p')">P</ion-button>
+        <ion-button #button16 color="warning" fill="outline" (click) = "pesquisarLetra(button16,'q')">Q</ion-button>
+    </div>
+    <div align="center" class="but">
+      <ion-button #button17 color="warning" fill="outline" (click) = "pesquisarLetra(button17,'r')">R</ion-button>
+      <ion-button #button18 color="warning" fill="outline" (click) = "pesquisarLetra(button18,'s')">S</ion-button>
+      <ion-button #button19 color="warning" fill="outline" (click) = "pesquisarLetra(button19,'t')">T</ion-button>
+      <ion-button #button20 color="warning" fill="outline" (click) = "pesquisarLetra(button20,'u')">U</ion-button>
   </div>
+  <div align="center" class="but">
+    <ion-button #button21 color="warning" fill="outline" (click) = "pesquisarLetra(button21,'v')">V</ion-button>
+    <ion-button #button22 color="warning" fill="outline" (click) = "pesquisarLetra(button22,'x')">X</ion-button>
+    <ion-button #button23 color="warning" fill="outline" (click) = "pesquisarLetra(button23,'z')">Z</ion-button>
+</div>
+    </div>
+
+    
+      <div class="boneco"><ion-img src="../../assets/icon/forca-img-1.png" #img1></ion-img>
+      </div>
+
+      <!-- <div class="corpo">
+        <div class="bracoEsq"><ion-img src="../../assets/icon/favicon.png"  #img2></ion-img></div>
+        <div class="tronco"><ion-img src="../../assets/icon/favicon.png"  #img3></ion-img></div>
+        <div class="bracoDir"><ion-img src="../../assets/icon/favicon.png" #img4></ion-img></div>
+      </div>
+
+      <div class="pernas">
+        <div class="pernaEsq"><ion-img src="../../assets/icon/favicon.png" #img5></ion-img></div>
+        <div class="pernaDir"><ion-img src="../../assets/icon/favicon.png"  #img6></ion-img></div>
+      </div> -->
+    
 </ion-content>
+
